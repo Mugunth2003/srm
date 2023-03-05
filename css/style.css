@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(rgb(162, 80, 180), rgba(87, 33, 121, 0.9)), url("../images/sample.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.home .center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.home nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.home nav .navs .list {
+  justify-content: end;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.home nav .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.5rem;
+}
+.home nav .img img {
+  width: 100%;
+}
+
+.event {
+  padding-top: 7rem;
+  padding-bottom: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px;
+}
+.event .card {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */
