@@ -1,43 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.home {
-  min-height: 100vh;
-  position: relative;
-  background: linear-gradient(rgb(162, 80, 180), rgba(87, 33, 121, 0.9)), url("../images/sample.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+:root {
+  --gold: #dbb42c;
+  --white: #f1faee;
+  --purple: #c879ff;
+  --dk-purple: #2c0735;
 }
-.home .center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+
+html {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--white);
+  overflow-x: hidden;
 }
-.home nav {
+
+body {
+  overflow-x: hidden;
+}
+
+.nav {
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 100;
 }
-.home nav .navs .list {
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+nav .navs .list {
   justify-content: end;
   font-size: 1.3rem;
   font-weight: 500;
 }
-.home nav .img {
+nav .img {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 5.5rem;
 }
-.home nav .img img {
+nav .img img {
   width: 100%;
+}
+
+.home {
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(rgb(162, 80, 180), rgba(87, 33, 121, 0.9)), url("../images/sample.jpg");
+  background-size: cover;
+  background-position: top;
+  padding-top: 7rem;
+}
+.home .heads .clgName {
+  width: 100%;
+  text-align: center;
+  color: var(--gold);
+}
+.home .content {
+  margin-top: 2rem;
+  color: var(--gold);
+}
+.home .content .dept {
+  text-align: center;
+  text-transform: uppercase;
+}
+.home .content .org {
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  margin: 1.2rem 0;
+}
+.home .content .org h2 {
+  font-size: 4rem;
+  text-transform: capitalize;
+}
+.home .content .title {
+  text-align: center;
+  text-transform: uppercase;
+}
+.home .content .title h1 {
+  font-size: 5rem;
+  background: url("../images/gold.jpg");
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.home .content .evlogo {
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+}
+.home .content .evlogo img {
+  height: 100%;
 }
 
 .event {
@@ -48,4 +114,177 @@
 .event .card {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   height: 100%;
+}
+
+.agenda {
+  padding-top: 3rem;
+}
+.agenda .txt p {
+  text-indent: 4rem;
+  text-align: justify;
+  text-decoration: none;
+}
+.agenda h1 {
+  color: var(--dk-purple);
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+.agenda p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.countdown {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  text-align: center;
+  background: linear-gradient(rgba(87, 33, 121, 0.9), rgb(162, 80, 180));
+  color: var(--dk-purple);
+}
+.countdown h2 {
+  font-size: 3rem;
+}
+.countdown .cd {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+.countdown .cd div {
+  margin: 0 0.5rem;
+}
+.countdown p {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0 2rem;
+  color: var(--white);
+}
+.countdown span {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.office__container {
+  padding-top: 4rem;
+}
+.office__container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.office__container .c1 {
+  padding-bottom: 3rem;
+}
+.office__container .c2 {
+  padding-bottom: 3rem;
+}
+
+.map {
+  margin-top: 5rem;
+}
+.map h1 {
+  text-align: center;
+}
+.map p {
+  margin: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  margin-top: 6rem;
+  text-align: center;
+  background-color: rgba(200, 121, 255, 0.5);
+  height: 15rem;
+}
+.footer h3 {
+  font-size: 2rem;
+}
+
+.links {
+  position: relative;
+  top: 3rem;
+}
+
+p {
+  text-decoration: underline;
+}
+
+a {
+  color: #000;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  padding: 0 2rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.event .card:hover .event_container {
+  animation: zoom;
+}
+
+@keyframes zoom {
+  from {
+    -o-object-position: 0 50%;
+       object-position: 0 50%;
+  }
+  to {
+    -o-object-position: 100% 50%;
+       object-position: 100% 50%;
+  }
+}
+.swipe {
+  margin: 2rem 0;
+}
+.swipe img {
+  width: 100%;
+}
+
+@media screen and (max-width: 766px) {
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+  .clgName h2 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  .clgName h4 {
+    font-size: 1rem;
+  }
+  .home .content .title h1 {
+    font-size: 1.7rem;
+  }
+  .home .content .title h2 {
+    font-size: 1rem;
+  }
+  .home .content .org h2 {
+    font-size: 3rem;
+  }
+  .home .content .dept h3 {
+    font-size: 1.1rem;
+  }
+  .home .content .dept h4 {
+    font-size: 1rem;
+  }
+  .countdown {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    text-align: center;
+  }
+  .countdown h2 {
+    font-size: 3rem;
+  }
+  .countdown .cd {
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+  .countdown p {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 0 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */
