@@ -18,7 +18,7 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 // --------------date------------------
-var endDate = new Date("March 30,2023 00:00:00").getTime();
+var endDate = new Date("March 31,2023 00:00:00").getTime();
 var x = setInterval(function(){
     var now = new Date().getTime();
     var duration = endDate-now;
